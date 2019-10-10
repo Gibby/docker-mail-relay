@@ -23,4 +23,6 @@ postmap /etc/postfix/sasl_passwd
 
 # Launch
 rm -f /var/spool/postfix/pid/*.pid
+touch /var/log/mail.log
+tail -f /var/log/mail.log &
 exec /usr/bin/supervisord -n -c /etc/supervisord.conf
