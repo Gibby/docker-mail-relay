@@ -9,7 +9,7 @@ Contains:
 Processes are managed by supervisord, including cronjobs
 
 The container provides a simple proxy relay for environments like Amazon VPC where you may have private servers with no Internet connection
-and therefore with no access to external mail relays (e.g. Amazon SES, SendGrid and others). You need to supply the container with your 
+and therefore with no access to external mail relays (e.g. Amazon SES, SendGrid and others). You need to supply the container with your
 external mail relay address and credentials. The configuration is tested with Amazon SES.
 
 
@@ -35,5 +35,4 @@ Example
 
 Launch Postfix container:
 
-    $ docker run -d -h relay.example.com --name="mailrelay" -e SMTP_LOGIN=myLogin -e SMTP_PASSWORD=myPassword -p 25:25 alterrebe/postfix-relay
-
+    $ docker run -d -h relay.example.com --name="mailrelay" -e SMTP_LOGIN=myLogin -e SMTP_PASSWORD=myPassword -p 25:25 gibby/postfix-relay
